@@ -11,5 +11,6 @@ namespace UnityAuthorization.Repository.Interface
         Task AddAsync(T entity);
         int SaveAsync();
         Task<int> SaveChangeAsync();
+        void Update(T entity);
     }
 }

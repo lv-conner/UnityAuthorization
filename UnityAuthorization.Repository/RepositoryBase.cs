@@ -35,5 +35,10 @@ namespace UnityAuthorization.Repository
         {
             return _dbContext.SaveChangesAsync();
         }
+
+        public void Update(T entity)
+        {
+            _dbContext.Update(entity);
+        }
     }
 }
