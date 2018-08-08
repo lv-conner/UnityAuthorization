@@ -28,6 +28,10 @@ namespace UnityAuthorization
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //add-migratioin -context ConfigurationDbContext
+            //add-migratioin -context PersistedGrantDbContext
+            //update-database -context PersistedGrantDbContext
+            //update-database -context ConfigurationDbContext
             var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -48,9 +52,6 @@ namespace UnityAuthorization
                     options.EnableTokenCleanup = true;
                     options.TokenCleanupInterval = 30;
                 });
-            //services.AddAuthentication();
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

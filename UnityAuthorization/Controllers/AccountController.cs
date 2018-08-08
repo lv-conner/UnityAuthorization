@@ -10,11 +10,23 @@ using Microsoft.AspNetCore.Mvc;
 using UnityAuthorization.Models;
 using Microsoft.AspNetCore.Http;
 using IdentityModel;
+using IdentityServer4.Services;
+using IdentityServer4.Events;
+using IdentityServer4.Extensions;
 
 namespace UnityAuthorization.Controllers
 {
     public class AccountController : Controller
     {
+
+        private readonly IEventService _eventService;
+        private readonly IIdentityServerInteractionService _interaction;
+
+        public AccountController(IEventService eventService, IIdentityServerInteractionService interaction)
+        {
+            _eventService = eventService;
+            _interaction = interaction;
+        }
 
         public IActionResult Index()
         {
@@ -66,6 +78,32 @@ namespace UnityAuthorization.Controllers
             {
                 return Redirect(returnUrl);
             }
+        }
+
+
+
+        [HttpGet]
+        public async  Task<IActionResult> Logout(string logoutId)
+        {
+            var context = await _interaction.GetLogoutContextAsync(logoutId);
+            return await Logout(new LogoutViewModel() { LogoutId = logoutId });
+        }
+        [HttpPost]
+        public async Task<IActionResult> Logout(LogoutViewModel logoutView)
+        {
+            var context = await _interaction.GetLogoutContextAsync(logoutView.LogoutId);
+
+            if (User?.Identity.IsAuthenticated == true)
+            {
+                await HttpContext.SignOutAsync();
+                await _eventService.RaiseAsync(new UserLogoutSuccessEvent(User.GetSubjectId(), User.GetDisplayName()));
+            }
+            if(context.PostLogoutRedirectUri != null)
+            {
+                return Redirect(context.PostLogoutRedirectUri);
+            }
+            return View();
+
         }
     }
 }

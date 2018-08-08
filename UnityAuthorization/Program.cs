@@ -14,12 +14,15 @@ namespace UnityAuthorization
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            var host = CreateWebHostBuilder(args).Build();
+            //添加种子数据
+            //SeedData.EnsureSeedData(host.Services);
+            host.Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://localhost:9000")
+                .UseUrls("http://localhost:10000")
                 .UseStartup<Startup>();
     }
 }
