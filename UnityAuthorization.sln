@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitiyAuthorization.Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorization.Repository", "UnityAuthorization.Repository\UnityAuthorization.Repository.csproj", "{3640E200-1210-4AC8-AE63-54B74FFB5ADC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorizatioin.Query", "UnityAuthorizatioin.Query\UnityAuthorizatioin.Query.csproj", "{4D642BD3-7B6F-455B-8496-FA81682F5A30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3640E200-1210-4AC8-AE63-54B74FFB5ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3640E200-1210-4AC8-AE63-54B74FFB5ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3640E200-1210-4AC8-AE63-54B74FFB5ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D642BD3-7B6F-455B-8496-FA81682F5A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D642BD3-7B6F-455B-8496-FA81682F5A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D642BD3-7B6F-455B-8496-FA81682F5A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D642BD3-7B6F-455B-8496-FA81682F5A30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
