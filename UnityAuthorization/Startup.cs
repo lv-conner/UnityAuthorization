@@ -52,6 +52,7 @@ namespace UnityAuthorization
                     options.EnableTokenCleanup = true;
                     options.TokenCleanupInterval = 30;
                 });
+            services.AddUnityProfileService();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

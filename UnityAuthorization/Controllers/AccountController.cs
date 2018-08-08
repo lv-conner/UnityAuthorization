@@ -34,7 +34,7 @@ namespace UnityAuthorization.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login(string returnUrl)
         {
             return View();
         }
@@ -54,7 +54,7 @@ namespace UnityAuthorization.Controllers
             //claimsIdentity.AddClaims(claims);
             claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, "admin"));
             claimsIdentity.AddClaim(new Claim(ClaimTypes.Sid, "001"));
-            claimsIdentity.AddClaim(new Claim("sub", "1"));
+            claimsIdentity.AddClaim(new Claim("sub", "004"));
             ClaimsPrincipal user = new ClaimsPrincipal(claimsIdentity);
             //var u = new TestUser
             //{

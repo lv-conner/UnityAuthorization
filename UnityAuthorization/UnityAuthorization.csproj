@@ -17,4 +17,8 @@
     <Folder Include="IdentityController\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UnitiyAuthorization.Services\UnitiyAuthorization.Services.csproj" />
+  </ItemGroup>
+
 </Project>
