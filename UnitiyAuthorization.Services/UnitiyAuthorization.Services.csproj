@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentCache.Microsoft.Extensions.Caching.Abstractions" Version="4.0.0.2" />
     <PackageReference Include="IdentityServer4" Version="2.1.0" />
   </ItemGroup>
 
