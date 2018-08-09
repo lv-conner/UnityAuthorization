@@ -77,5 +77,16 @@ namespace UnityAuthorization.Controllers
             var col = _configurationDbContext.Entry(client).Collections;
             return client;
         }
+
+        public ActionResult ApiResource()
+        {
+            var apis = _configurationDbContext.ApiResources
+                .Include(p => p.Scopes)
+                .ThenInclude(p=>p.UserClaims)
+                .Include(p => p.Secrets)
+                .Include(p=>p.UserClaims)
+                .Select(p => p.ToModel()).ToList();
+            return Json(apis);
+        }
     }
 }
