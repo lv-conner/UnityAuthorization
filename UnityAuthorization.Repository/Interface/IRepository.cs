@@ -9,7 +9,7 @@ namespace UnityAuthorization.Repository.Interface
     {
         void Add(T entity);
         Task AddAsync(T entity);
-        int SaveAsync();
+        int SaveChange();
         Task<int> SaveChangeAsync();
         void Update(T entity);
     }

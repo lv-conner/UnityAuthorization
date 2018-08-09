@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Caching;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace UnitiyAuthorization.Services.IdentityServices
+namespace UnityAuthorization.Services.IdentityServices
 {
     public class RedisPersistentGrantStore : IPersistedGrantStore
     {

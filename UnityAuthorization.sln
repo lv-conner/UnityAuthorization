@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityAuthorization", "UnityAuthorization\UnityAuthorization.csproj", "{60A28264-6936-40D5-AB54-5B95D683373A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitiyAuthorization.Services", "UnitiyAuthorization.Services\UnitiyAuthorization.Services.csproj", "{DCC9BAA4-EFA1-4F71-8312-6067ED71142A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorization.Services", "UnitiyAuthorization.Services\UnityAuthorization.Services.csproj", "{DCC9BAA4-EFA1-4F71-8312-6067ED71142A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorization.Repository", "UnityAuthorization.Repository\UnityAuthorization.Repository.csproj", "{3640E200-1210-4AC8-AE63-54B74FFB5ADC}"
 EndProject

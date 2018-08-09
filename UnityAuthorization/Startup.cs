@@ -13,6 +13,9 @@ using IdentityModel;
 using IdentityServer4;
 using Microsoft.Extensions.Options;
 using System.Reflection;
+using IdentityServer4.EntityFramework.DbContexts;
+using UnityAuthorization.Repository;
+using UnityAuthorization.Repository.Interface;
 
 namespace UnityAuthorization
 {
@@ -53,7 +56,14 @@ namespace UnityAuthorization
                     options.TokenCleanupInterval = 30;
                 });
             services.AddUnityProfileService();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddJsonOptions(options =>
+                {
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
+            services.AddTransient(typeof(IConfigurationDbContextRepository<>), typeof(ConfigurationDbContextRepository<>));
+            services.AddTransient(typeof(IPersistentRepository<>), typeof(PersistedGrantRepository<>));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

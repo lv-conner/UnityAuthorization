@@ -18,7 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UnitiyAuthorization.Services\UnitiyAuthorization.Services.csproj" />
+    <ProjectReference Include="..\UnitiyAuthorization.Services\UnityAuthorization.Services.csproj" />
+    <ProjectReference Include="..\UnityAuthorization.Repository\UnityAuthorization.Repository.csproj" />
   </ItemGroup>
 
 </Project>

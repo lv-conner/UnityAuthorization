@@ -26,7 +26,7 @@ namespace UnityAuthorization.Repository
             return _dbContext.Set<T>().AddAsync(entity);
         }
 
-        public virtual int SaveAsync()
+        public virtual int SaveChange()
         {
             return _dbContext.SaveChanges();
         }
