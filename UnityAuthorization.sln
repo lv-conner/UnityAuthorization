@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityAuthorization", "UnityAuthorization\UnityAuthorization.csproj", "{60A28264-6936-40D5-AB54-5B95D683373A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorization.Services", "UnitiyAuthorization.Services\UnityAuthorization.Services.csproj", "{DCC9BAA4-EFA1-4F71-8312-6067ED71142A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityAuthorization.Services", "UnitiyAuthorization.Services\UnityAuthorization.Services.csproj", "{DCC9BAA4-EFA1-4F71-8312-6067ED71142A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorization.Repository", "UnityAuthorization.Repository\UnityAuthorization.Repository.csproj", "{3640E200-1210-4AC8-AE63-54B74FFB5ADC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityAuthorization.Repository", "UnityAuthorization.Repository\UnityAuthorization.Repository.csproj", "{3640E200-1210-4AC8-AE63-54B74FFB5ADC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorizatioin.Query", "UnityAuthorizatioin.Query\UnityAuthorizatioin.Query.csproj", "{4D642BD3-7B6F-455B-8496-FA81682F5A30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnityAuthorizatioin.Query", "UnityAuthorizatioin.Query\UnityAuthorizatioin.Query.csproj", "{4D642BD3-7B6F-455B-8496-FA81682F5A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityAuthorization.IdentityContext", "UnityAuthorization.IdentityContext\UnityAuthorization.IdentityContext.csproj", "{A575604D-AB11-4F7C-9E59-9CA0C0DC32FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4D642BD3-7B6F-455B-8496-FA81682F5A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D642BD3-7B6F-455B-8496-FA81682F5A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D642BD3-7B6F-455B-8496-FA81682F5A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A575604D-AB11-4F7C-9E59-9CA0C0DC32FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A575604D-AB11-4F7C-9E59-9CA0C0DC32FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A575604D-AB11-4F7C-9E59-9CA0C0DC32FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A575604D-AB11-4F7C-9E59-9CA0C0DC32FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
